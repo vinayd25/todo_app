@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/widgets/update_task_dialog.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../utils/colors.dart';
 import 'delete_task_dialog.dart';
@@ -91,6 +92,16 @@ class TaskItem extends StatelessWidget {
                         builder: (context) => DeleteTaskDialog(taskId: taskId, taskName:taskName),
                       ),
                     );
+                  },
+                ),
+                PopupMenuItem(
+                  value: 'share',
+                  child: const Text(
+                    'Share',
+                    style: TextStyle(fontSize: 13.0),
+                  ),
+                  onTap: (){
+                    Share.share('$taskName\n$taskDesc', subject: 'To-Do app');
                   },
                 ),
               ];
