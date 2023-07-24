@@ -1,16 +1,9 @@
 # todo_app
 
-A new Flutter project.
+A flutter To-Do app with following features:
 
-## Getting Started
+CRUD task - Used firebase firestore to perform CRUD operations.
 
-This project is a starting point for a Flutter application.
+Saving images for a task: Used firebase storage to implement this.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Set Reminders - Used scheduleNotification method of flutter_local_notifications to implement this. 
