@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../bloc/taskbloc.dart';
+import '../bloc/task_bloc.dart';
 
 class DeleteTaskDialog extends StatefulWidget {
   final String taskId, taskName;
