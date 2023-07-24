@@ -1,6 +1,6 @@
 # todo_app
 
-A flutter To-Do app with following features:
+## A flutter To-Do app with following features:
 
 CRUD task - Used firebase firestore to perform CRUD operations.
 
