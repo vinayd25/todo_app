@@ -5,6 +5,7 @@ import 'package:todo_app/utils/colors.dart';
 import '../model/task.dart';
 
 class TaskDetails extends StatefulWidget {
+  static const String routeName = "/taskDetails";
 
   Task task;
   Color taskColor;

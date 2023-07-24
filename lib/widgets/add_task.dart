@@ -12,6 +12,8 @@ import 'package:todo_app/widgets/pickers.dart';
 import '../model/task.dart';
 
 class AddTask extends StatefulWidget {
+  static const String routeName = "/newTask";
+
   const AddTask({
     Key? key,
   }) : super(key: key);

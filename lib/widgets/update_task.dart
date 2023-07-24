@@ -12,6 +12,7 @@ import '../utils/colors.dart';
 import 'disabled_focus.dart';
 
 class UpdateTask extends StatefulWidget {
+  static const String routeName = "/editTask";
 
   final Task task;
 

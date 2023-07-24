@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/utils/colors.dart';
 
 import '../bloc/task_bloc.dart';
 
@@ -19,7 +20,7 @@ class _DeleteTaskDialogState extends State<DeleteTaskDialog> {
       title: const Text(
         'Delete Task',
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 16, color: Colors.brown),
+        style: TextStyle(fontSize: 16, color: AppColors.primaryColor),
       ),
       content: SizedBox(
         child: Form(
@@ -54,9 +55,6 @@ class _DeleteTaskDialogState extends State<DeleteTaskDialog> {
             bloc.deleteTasks(widget.taskId);
             Navigator.of(context, rootNavigator: true).pop();
           },
-          style: ElevatedButton.styleFrom(
-            primary: Colors.brown,
-          ),
           child: const Text('Delete'),
         ),
       ],

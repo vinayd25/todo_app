@@ -4,8 +4,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:todo_app/services/notification_service.dart';
 import 'package:todo_app/utils/colors.dart';
+import 'package:todo_app/views/task_details.dart';
 import 'package:todo_app/views/tasks.dart';
 import 'package:todo_app/widgets/add_task.dart';
+import 'package:todo_app/widgets/update_task.dart';
+import '../model/task.dart' as task;
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(
@@ -34,6 +37,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true
       ),
+      routes: {
+        AddTask.routeName: (context) => const AddTask(),
+        UpdateTask.routeName: (context) => UpdateTask(task: task.Task(taskDesc: '', time: '', taskTag: '', taskName: '', taskId: '', notifId: 0, date: '', taskImagePath: '')),
+        TaskDetails.routeName: (context) => TaskDetails(task.Task(taskDesc: '', time: '', taskTag: '', taskName: '', taskId: '', notifId: 0, date: '', taskImagePath: ''), AppColors.primaryColor),
+      },
       home: const MyHomePage(),
     );
   }
