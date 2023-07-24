@@ -75,7 +75,7 @@ class _AddTaskState extends State<AddTask> {
                     TextFormField(
                       controller: taskDescController,
                       keyboardType: TextInputType.multiline,
-                      maxLines: null,
+                      maxLines: 3,
                       style: const TextStyle(fontSize: 14),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(

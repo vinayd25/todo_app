@@ -42,9 +42,16 @@ class TaskItem extends StatelessWidget {
               children: [
                 Text(task.taskName, style: const TextStyle(color: AppColors.titleColor, fontSize: 16, fontWeight: FontWeight.w400)),
                 const SizedBox(height: 2),
-                Text(task.taskDesc, style: const TextStyle(color: AppColors.descColor, fontSize: 16, fontWeight: FontWeight.w400)),
+                Text(task.taskDesc, style: const TextStyle(color: AppColors.descColor, fontSize: 16, fontWeight: FontWeight.w400), overflow: TextOverflow.ellipsis),
                 const SizedBox(height: 5),
-                Text('${task.date} ${task.time}', style: const TextStyle(color: AppColors.descColorLight, fontSize: 12, fontWeight: FontWeight.w400))
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.timer_outlined, size: 15, color: AppColors.descColor),
+                    const SizedBox(width: 5),
+                    Text('${task.date} ${task.time}', style: const TextStyle(color: AppColors.descColorLight, fontSize: 12, fontWeight: FontWeight.w400)),
+                  ],
+                )
               ],
             )),
             const SizedBox(width: 10),
